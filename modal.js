@@ -7,7 +7,8 @@ define(["dojo/_base/lang",
         "dojo/on", 
         "dijit/focus",
         "dojo/_base/fx",
-        "dojo/string"
+        "dojo/string",
+
         "dojo/text!./templates/modal.html"
         "xstyle/css!.css/modal.css"],
     function (  lang, 
@@ -19,6 +20,7 @@ define(["dojo/_base/lang",
                 on, 
                 focusUtil, 
                 fx,
+                
                 string,
                 template) {
 

@@ -5,9 +5,9 @@ define(["dojo/_base/lang",
         "dojo/dom-construct", 
         "dojo/dom-style", 
         "dojo/on", 
-        "dijit/focus",
         "dojo/_base/fx",
         "dojo/string",
+
         "dojo/text!.templates/toaster.html"
         "xstyle/css!.css/toaster.css"],
     function (  lang, 
@@ -16,9 +16,9 @@ define(["dojo/_base/lang",
                 dom, 
                 domConstruct, 
                 domStyle, 
-                on, 
-                focusUtil, 
+                on,  
                 fx,
+                
                 string,
                 template) {
 
