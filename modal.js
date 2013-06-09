@@ -1,5 +1,5 @@
 define(["dojo/_base/lang",
-        "c8/uid",
+        "./uid",
         "dojo/query",
         "dojo/dom",
         "dojo/dom-construct",
@@ -7,8 +7,20 @@ define(["dojo/_base/lang",
         "dojo/on", 
         "dijit/focus",
         "dojo/_base/fx",
+        "dojo/string"
+        "dojo/text!./templates/modal.html"
         "xstyle/css!.css/modal.css"],
-    function (lang, uid, query, dom, domConstruct, domStyle, on, focusUtil, fx) {
+    function (  lang, 
+                uid, 
+                query, 
+                dom, 
+                domConstruct, 
+                domStyle, 
+                on, 
+                focusUtil, 
+                fx,
+                string,
+                template) {
 
         return {
             fire: function (options) {
@@ -53,7 +65,7 @@ define(["dojo/_base/lang",
                 button: "Alright, great!"
             },
             structure: function () {
-                return '<div id="' + this._id + '" class="modal-bg modal-' + this.options.type + '"><div class="modal-window"><div class="modal-header"><h1>' + this.options.header + '</h1><i data-function="close" class="close"></i></div><div class="modal-body"><p>' + this.options.body + '</p></div><div class="modal-footer"><input type="button" data-function="close" class="button button-continue" value="' + this.options.button + '"></input></div></div></div>'
+                return string.substitute(template, this);
             }
 
         };

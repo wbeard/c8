@@ -7,8 +7,20 @@ define(["dojo/_base/lang",
         "dojo/on", 
         "dijit/focus",
         "dojo/_base/fx",
+        "dojo/string",
+        "dojo/text!.templates/toaster.html"
         "xstyle/css!.css/toaster.css"],
-    function (lang, uid, query, dom, domConstruct, domStyle, on, focusUtil, fx) {
+    function (  lang, 
+                uid, 
+                query, 
+                dom, 
+                domConstruct, 
+                domStyle, 
+                on, 
+                focusUtil, 
+                fx,
+                string,
+                template) {
 
         return {
             fire: function (options) {
@@ -56,7 +68,7 @@ define(["dojo/_base/lang",
                 body: "Things are looking good",
             },
             structure: function () {
-                return '<div id="' + this._id + '" class="toaster"><i data-function="close" class="close"></i><p>' + this.options.body + '</p></div>'
+                return string.substitute(template, this);
             }
 
         };
