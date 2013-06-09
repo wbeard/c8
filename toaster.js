@@ -8,7 +8,7 @@ define(["dojo/_base/lang",
         "dojo/_base/fx",
         "dojo/string",
 
-        "dojo/text!.templates/toaster.html"
+        "dojo/text!.templates/toaster.html",
         "xstyle/css!.css/toaster.css"],
     function (  lang, 
                 uid, 
@@ -18,15 +18,16 @@ define(["dojo/_base/lang",
                 domStyle, 
                 on,  
                 fx,
-                
+
                 string,
                 template) {
 
         return {
             fire: function (options) {
-                this.options = lang.mixin(this.options, options);
-                this._id = uid("toaster");
-                domConstruct.place(this.structure(), query("body")[0]);
+                var structure = this.create();
+
+                domConstruct.place(structure, query("body")[0]);
+
                 this.domElem = dom.byId(this._id);
 
                 fx.animateProperty({

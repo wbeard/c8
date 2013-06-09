@@ -9,7 +9,7 @@ define(["dojo/_base/lang",
         "dojo/_base/fx",
         "dojo/string",
 
-        "dojo/text!./templates/modal.html"
+        "dojo/text!./templates/modal.html",
         "xstyle/css!.css/modal.css"],
     function (  lang, 
                 uid, 
@@ -20,16 +20,18 @@ define(["dojo/_base/lang",
                 on, 
                 focusUtil, 
                 fx,
-                
+
                 string,
                 template) {
 
         return {
             fire: function (options) {
-                this.options = lang.mixin(this.options, options);
-                this._id = uid("modal");
-                domConstruct.place(this.structure(), query("body")[0]);
+                var structure = this.create();
+
+                domConstruct.place(structure, query("body")[0]);
+
                 this.domElem = dom.byId(this._id);
+
                 this.button = query("input[type='button']", dom.byId(this._id))[0];
 
                 fx.fadeIn({
@@ -64,6 +66,7 @@ define(["dojo/_base/lang",
                 type: "message",
                 header: "Howdy",
                 body: "Things are looking good",
+                bodyType: "text"
                 button: "Alright, great!"
             },
             structure: function () {
