@@ -2,6 +2,7 @@ c8
 ==
 
 friendly is an AMD ui library.
+------------------------------
 c8 is an acronym for friendly.
 
 Inspired by the elegance of twitter/bootstrap, with the AMD goodness of dojo. 
