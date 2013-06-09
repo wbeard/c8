@@ -1,0 +1,17 @@
+.close 
+{
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: url('../img/x.png') no-repeat;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+}
+
+h1, p
+{
+    padding: 0;
+    margin: 0;
+}
