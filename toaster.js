@@ -24,7 +24,7 @@ define(["dojo/_base/lang",
 
         return {
             fire: function (options) {
-                var structure = this.create();
+                var structure = this.create(options);
 
                 domConstruct.place(structure, query("body")[0]);
 
