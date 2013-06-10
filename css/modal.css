@@ -13,131 +13,124 @@
         </div>
     </div>
 </div> */
-
-@import "shared.css";
+.close {
+  width: 20px;
+  height: 20px;
+  display: block;
+  background: url("../img/x.png") no-repeat;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+}
+h1,
+p {
+  padding: 0;
+  margin: 0;
+}
 @import "button.css";
-
-.modal-bg 
-{
-    background: #ccc;
-    background: rgba(0,0,0,0.7);
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    text-align: center;
-    z-index: 999;
+.modal-bg {
+  background: #ccc;
+  background: rgba(0,0,0,0.7);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  text-align: center;
+  z-index: 999;
 }
-
-div.modal-display 
-{
-    opacity: 1;
-}
-
 .modal-bg::after {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    margin-right: -0.25em;
-    vertical-align: middle;
+  content: '';
+  display: inline-block;
+  height: 100%;
+  margin-right: -0.25em;
+  vertical-align: middle;
 }
-
-.modal-window 
-{
-    background: #fff;
-    box-shadow: 0 0 10px #555;
-    -webkit-box-shadow: 0 0 10px 5px #000;
-    margin: 0 auto;
-    min-width: 500px;
-    display: inline-block;
-    vertical-align: middle;
-    text-align: left;
-    border-radius: 2px;
-    position: relative;
-    max-width: 480px;
+div.modal-display {
+  opacity: 1;
 }
-
-.modal-error .modal-header > h1
-{
-    color: #000;
-    text-shadow: 1px 1px 0px #555;
+.modal-window {
+  background: #fff;
+  -webkit-box-shadow: 0 0 10px #555;
+  -moz-box-shadow: 0 0 10px #555;
+  -ms-box-shadow: 0 0 10px #555;
+  -o-box-shadow: 0 0 10px #555;
+  box-shadow: 0 0 10px #555;
+  margin: 0 auto;
+  min-width: 500px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  position: relative;
+  max-width: 480px;
 }
-
-.modal-header 
-{
-    padding: 10px;
-    background: background: #242424;
-    background: -webkit-linear-gradient(top,#494949,#242424);
-    background: -moz-linear-gradient(top,#494949,#242424);
-    background: -o-linear-gradient(top,#494949,#242424);
-    background: -ms-linear-gradient(top,#494949,#242424);
-    background: linear-gradient(top,#494949,#242424);
+.modal-header {
+  padding: 10px;
+  background: #242424;
+  background: -webkit-linear-gradient(top, #494949, #242424);
+  background: -moz-linear-gradient(top, #494949, #242424);
+  background: -o-linear-gradient(top, #494949, #242424);
+  background: -ms-linear-gradient(top, #494949, #242424);
+  background: linear-gradient(top, #494949, #242424);
 }
-
-.modal-message .modal-header 
-{
-    background: #3E9141;
-    background: -webkit-linear-gradient(top,#59AD5C,#3E9141);
-    background: -moz-linear-gradient(top,#59AD5C,#3E9141);
-    background: -ms-linear-gradient(top,#59AD5C,#3E9141);
-    background: -o-linear-gradient(top,#59AD5C,#3E9141);
-    background: linear-gradient(top,#59AD5C,#3E9141);
+.modal-header > h1 {
+  font-size: 1.5em;
+  color: #fff;
+  margin: 0;
 }
-
-.modal-header > h1 
-{
-    font-size: 1.5em;
-    color: #fff;
-    margin: 0;
+.modal-error .modal-header > h1 {
+  color: #000;
+  text-shadow: 1px 1px 0px #555;
 }
-
+.modal-error .modal-footer > input {
+  color: #000;
+  background: #ececec;
+  background: -webkit-linear-gradient(top, #efefef, #ececec);
+  background: -moz-linear-gradient(top, #efefef, #ececec);
+  background: -o-linear-gradient(top, #efefef, #ececec);
+  background: -ms-linear-gradient(top, #efefef, #ececec);
+  background: linear-gradient(top, #efefef, #ececec);
+}
+.modal-message .modal-header {
+  background: #3e9141;
+  background: -webkit-linear-gradient(top, #59ad5c, #3e9141);
+  background: -moz-linear-gradient(top, #59ad5c, #3e9141);
+  background: -o-linear-gradient(top, #59ad5c, #3e9141);
+  background: -ms-linear-gradient(top, #59ad5c, #3e9141);
+  background: linear-gradient(top, #59ad5c, #3e9141);
+}
 .modal-message .modal-header > h1 {
-	color: #0D5025;
-    text-shadow: 1px 1px 0px #29C46D;
+  color: #0d5025;
+  text-shadow: 1px 1px 0px #29c46d;
 }
-
-.modal-body 
-{
-    padding: 10px;
-    background: background: #efefef;
-    background: -webkit-linear-gradient(top,#efefef,#ececec);
-    background: -moz-linear-gradient(top,#efefef,#ececec);
-    background: -o-linear-gradient(top,#efefef,#ececec);
-    background: -ms-linear-gradient(top,#efefef,#ececec);
-    background: linear-gradient(top,#efefef,#ececec);
-    border-bottom: 1px solid #ddd;
+.modal-body {
+  padding: 10px;
+  background: #ececec;
+  background: -webkit-linear-gradient(top, #efefef, #ececec);
+  background: -moz-linear-gradient(top, #efefef, #ececec);
+  background: -o-linear-gradient(top, #efefef, #ececec);
+  background: -ms-linear-gradient(top, #efefef, #ececec);
+  background: linear-gradient(top, #efefef, #ececec);
+  border-bottom: 1px solid #ddd;
 }
-
-.modal-body > p
-{
-    color: #000;
-    font-size: 1em;
-    margin: 1em 0;
+.modal-body > p {
+  color: #000;
+  font-size: 1em;
+  margin: 1em 0;
 }
-
-.modal-footer 
-{
-    padding: 10px;
-    background: #d3d3d3;
-    min-height: 45px;
+.modal-footer {
+  padding: 10px;
+  background: #d3d3d3;
+  min-height: 45px;
   text-align: right;
-
 }
-
-.modal-footer > input 
-{
-    float: right;   
-}
-
-.modal-error .modal-footer > input 
-{
-    color: #000;
-    background: background: #efefef;
-    background: -webkit-linear-gradient(top,#efefef,#ececec);
-    background: -moz-linear-gradient(top,#efefef,#ececec);
-    background: -o-linear-gradient(top,#efefef,#ececec);
-    background: -ms-linear-gradient(top,#efefef,#ececec);
-    background: linear-gradient(top,#efefef,#ececec);
+.modal-footer > input {
+  float: right;
 }

@@ -1,0 +1,106 @@
+@import 'shared';
+
+.button {
+    padding: 3px 5px;
+    linearGradient(top, #fff, #efefef);
+    border-radius
+    box-shadow 0px 0px 2px #000
+    color black
+    text-decoration none
+    font 1em 'Droid Sans', sans-serif;
+    margin 0 5px
+    border 0
+    &:hover {
+        color: #555;
+    }
+}
+
+input[type=submit].button-large, .button-large, button.button-large
+    border-radius
+    min-height 50px
+    min-width 200px
+    text-align center
+    display inline-block
+
+input[type=submit].button-medium, .button-medium, button.button-medium
+    font-size 1.5em
+
+input[type=submit].button-small, a.button-small, button.button-small
+    font-size 0.75em
+    line-height 1em
+    padding 3px
+
+.button-no-margin 
+    margin 0
+
+.button-link {
+    color #08C
+    background transparent
+    border 0
+    border-radius 0
+    box-shadow none
+
+    &:hover {
+        text-decoration underline
+        color #08C
+    }
+}
+
+.button-continue  {
+    -moz-transition-property: -moz-box-shadow,-webkit-box-shadow,box-shadow,line-height;
+    -webkit-transition-property: -moz-box-shadow,-webkit-box-shadow,box-shadow,line-height;
+    transition-property: -moz-box-shadow,-webkit-box-shadow,box-shadow,line-height;
+    -moz-transition-duration: .2s,.2s,.2s,.2s;
+    -webkit-transition-duration: .2s,.2s,.2s,.2s;
+    transition-duration: .2s,.2s,.2s,.2s;
+    linearGradient(top,#59AD5C,#3E9141)
+    &:hover {
+        text-decoration: none;
+        color: #fff;
+        linearGradient(top, #67C06B, #3E9141)
+    }
+}
+
+.button-continue-flat {
+    background #469a49;
+    font-size 0.8em
+    box-shadow none
+    border-radius 0px
+    &:hover {
+    background #39833b
+    }
+}
+
+input[disabled=disabled], button[disabled]
+    color #c0c0c0 !important
+    linearGradient(top, #fff, #efefef);
+
+.button-primary 
+    linearGradient(top, #DBF0FF, #A9DBFF)
+
+.button-group {
+    & .button {
+        margin 0
+        border 1px #ccc solid
+        border-radius 0
+        box-shadow none
+        color black
+        &:hover {
+            color #555
+        }
+        &:first-child {
+            roundedLeft()
+        }
+        &:last-child {
+            roundedRight()
+        }
+    }
+    & .active {
+        color blue
+    }
+}
+
+fixed-right 
+    position absolute
+    top 10px
+    right 10px

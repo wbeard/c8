@@ -1,0 +1,79 @@
+$baseBorderRadius = 2px
+$closeIcon = url('../img/x.png')
+$transparentDarkBackground = rgba(0,0,0,0.7)
+
+border-radius()
+    if !arguments
+        $radius = $baseBorderRadius
+    else
+        $radius = arguments
+    -webkit-border-radius $radius
+    -moz-border-radius $radius
+    -ms-border-radius $radius
+    -o-border-radius $radius
+    border-radius $radius
+
+roundedRight()
+    if !arguments
+        $radius = $baseBorderRadius
+    else
+        $radius = arguments
+
+    -webkit-border-top-right-radius $radius
+    -moz-border-top-right-radius $radius
+    -ms-border-top-right-radius $radius
+    -o-border-top-right-radius $radius
+    border-top-right-radius $radius
+
+    -webkit-border-bottom-right-radius $radius
+    -moz-border-bottom-right-radius $radius
+    -ms-border-bottom-right-radius $radius
+    -o-border-bottom-right-radius $radius
+    border-bottom-right-radius $radius
+
+roundedLeft()
+    if !arguments
+        $radius = $baseBorderRadius
+    else
+        $radius = arguments
+
+    -webkit-border-top-left-radius $radius
+    -moz-border-top-left-radius $radius
+    -ms-border-top-left-radius $radius
+    -o-border-top-left-radius $radius
+    border-top-left-radius $radius
+
+    -webkit-border-bottom-left-radius $radius
+    -moz-border-bottom-left-radius $radius
+    -ms-border-bottom-left-radius $radius
+    -o-border-bottom-left-radius $radius
+    border-bottom-left-radius $radius
+
+box-shadow()
+    -webkit-box-shadow arguments
+    -moz-box-shadow arguments
+    -ms-box-shadow arguments
+    -o-box-shadow arguments
+    box-shadow arguments
+
+linearGradient(position, topColor, bottomColor)
+    background: bottomColor;
+    background: -webkit-linear-gradient(position, topColor, bottomColor);
+    background: -moz-linear-gradient(position, topColor, bottomColor);
+    background: -o-linear-gradient(position, topColor, bottomColor);
+    background: -ms-linear-gradient(position, topColor, bottomColor);
+    background: linear-gradient(position, topColor, bottomColor);
+
+.close 
+    width 20px
+    height 20px
+    display block
+    background $closeIcon no-repeat
+    position absolute
+    top 0px
+    right 0px
+    cursor pointer
+
+h1, p
+    padding 0
+    margin 0
